@@ -15,10 +15,91 @@
                 <img src="odin-lined.png" alt="Odin Logo" class="logo">
                 <h1>ODIN</h1>
             </div>
+            <footer class="footer">Photo by <a href="https://github.com/Gabrielmbl" target="_blank"
+                    rel="noopener noreferrer">Gabriel
+                    Lucena</a>
+            </footer>
         </div>
 
-        <div class="form-div">ELSE</div>
+        <div class="form-div">
+            <div class="introduction-div">
+                <div class="words-div">
+                    <h2><strong>This is not a real online service! You know you need something like this in your life to
+                            help you realize your deepest dreams. Sign up now to get started.</strong></h2>
+                    <h2><strong>You <i>know</i> you want to.</strong></h2>
+                </div>
+            </div>
+            <div class="actual-form">
+                <h2><strong>Let's do this!</strong></h2>
+                <form id="registration-form">
+                    <div class="main-form">
+
+                        <div class="left-form">
+                            <div class="individual-field">
+                                <label for="firstname">
+                                    <strong><span>FIRST NAME</span></strong>
+                                    <strong><span aria-label="required"></span></strong>
+                                </label>
+                                <input type="text" id="firstname" name="firstname" required />
+                            </div>
+
+                            <div class="individual-field">
+                                <label for="usermail">
+                                    <strong><span>EMAIL</span></strong>
+                                    <strong><span aria-label="required"></span></strong>
+                                </label>
+                                <input type="email" id="mail" name="usermail" required />
+                            </div>
+
+                            <div class="individual-field" id="password-div">
+                                <label for="password">
+                                    <strong><span>PASSWORD</span></strong>
+                                    <strong><span aria-label="required"></span></strong>
+                                </label>
+                                <input type="password" id="pwd" name="password" required />
+                                <span id="password-error" style="color: red; display: none;">* Passwords do not
+                                    match</span>
+                            </div>
+                        </div>
+
+                        <div class="right-form">
+                            <div class="individual-field">
+                                <label for="lastname">
+                                    <strong><span>LAST NAME</span></strong>
+                                    <strong><span aria-label="required"></span></strong>
+                                </label>
+                                <input type="text" id="lastname" name="lastname" required />
+                            </div>
+
+                            <div class="individual-field">
+                                <label for="phonenumber">
+                                    <strong><span>PHONE NUMBER</span></strong>
+                                    <strong><span aria-label="required"></span></strong>
+                                </label>
+                                <input type="tel" id="number" name="phonenumber" required />
+                            </div>
+
+                            <div class="individual-field">
+                                <label for="confirm-password">
+                                    <strong><span>CONFIRM PASSWORD</span></strong>
+                                    <strong><span aria-label="required"></span></strong>
+                                </label>
+                                <input type="password" id="confirm-pwd" name="confirm-password" required />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="buttons-div">
+                <button type="submit">
+                    <h3>Create Account</h3>
+                </button><br><br>
+                <h3>Already have an account? <a href="https://github.com/Gabrielmbl" target="_blank"
+                        rel="noopener noreferrer"><span class="login-link">Log in</span></a></h3>
+            </div>
+        </div>
     </div>
+    <script src="index.js"></script>
 </body>
 
 </html>

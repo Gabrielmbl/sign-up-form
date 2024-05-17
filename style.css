@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'norsebold';
     src: url('fonts/norse-bold-webfont.woff2') format('woff2'),
-         url('fonts/norse-bold-webfont.woff') format('woff');
+        url('fonts/norse-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -14,6 +14,8 @@ html {
     font-family: norsebold, sans-serif;
     height: 100%;
     width: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -22,22 +24,46 @@ body {
     height: 100%;
     width: 70%;
     background-color: black;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.main-div{
+.main-div {
     display: flex;
     width: 100%;
     height: 100%
 }
 
 .image-div {
-    flex: 1.78;
-    background-color: lightgray;
+    flex: 1.72;
     background-image: url('niagara-falls.jpg');
     background-size: cover;
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     position: relative;
+}
+
+.form-div {
+    flex: 3;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    font-size: 1.2rem;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 1.3rem;
 }
 
 .transparent-text {
@@ -52,15 +78,109 @@ body {
 }
 
 .logo {
-    margin-left: 10px; /* Adjust spacing between text and logo */
-    height: 12rem; /* Adjust the logo size to match the text */
-    
+    margin-left: 10px;
+    height: 12rem;
 }
 
-.form-div {
-    flex: 3;
-    background-color: lightblue;
+
+
+.introduction-div {
+    background-color: rgb(245, 245, 245);
+    flex: 27%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    z-index: 2;
 }
+
+
+.words-div {
+    flex: 1;
+    margin-top: 100pt;
+    margin-left: 5rem;
+    margin-right: 15rem;
+}
+
+.actual-form {
+    background-color: white;
+    flex: 21%;
+    padding-left: 5rem;
+    box-shadow: 0px 0px 8px 0px #888888;
+    z-index: 1;
+}
+
+.main-form {
+    display: flex;
+}
+
+.left-form,
+.right-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.individual-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-form {
+    padding-left: 7rem;
+}
+
+.buttons-div {
+    background-color: rgb(245, 245, 245);
+    flex: 27%;
+    padding-left: 5rem;
+    padding-top: 3rem;
+}
+
+
+.login-link {
+    color: #596D48;
+}
+
+button {
+    background-color:#596D48;
+    color: white;
+    width: 22rem;
+    height: 5rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 0 2px rgb(0, 0, 0);
+    border: 0;
+    cursor: pointer;
+}
+
+input {
+    width: 25rem;
+    height: 3rem;
+    box-sizing: border-box;
+    border: 1px solid #E5E7EB;
+    border-radius: 0.5rem;
+}
+
+input:focus {
+    border-color: lightblue;
+    box-shadow: 0 0 5px lightblue;
+}
+
+a {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: white;
+}
+
 
 
 /* Typography */
@@ -77,4 +197,32 @@ p {
     font-size: 1.4rem;
     line-height: 1.6;
     word-spacing: 0.6rem;
+}
+
+@media screen and (max-height: 768px) {
+    h1 {
+        font-size: 7rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-height: 480px) {
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
 }
